@@ -2,6 +2,8 @@ from konlpy.tag import Komoran
 import pickle
 import jpype
 
+import sys
+sys.path.append('../../config')
 
 class Preprocess:
     def __init__(self, word2index_dic='', userdic=None):
