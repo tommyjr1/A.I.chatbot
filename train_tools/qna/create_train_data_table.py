@@ -2,6 +2,8 @@ import pymysql
 
 import sys
 sys.path.append('../../utils/')
+sys.path.append('../../config/')
+
 
 from DatabaseConfig import * # DB 접속 정보 불러오기
 
