@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, abort
+from flask import Flask, request, jsonify, abort, render_template
 import socket
 import json
 
@@ -42,12 +42,12 @@ def indexs():
 @app.route('/query/<bot_type>', methods=['POST'])
 def query(bot_type):
     body = request.get_json()
-
     try:
         if bot_type == 'TEST':
             # 챗봇 API 테스트
-            ret = get_answer_from_engine(bottype=bot_type, query=body['query'])
-            return jsonify(ret)
+            id = request.form['query']
+            ret = get_answer_from_engine(bottype=bot_type, query=id)
+            return str(ret['Answer'])
 
         elif bot_type == "KAKAO":
             # 카카오톡 스킬 처리
@@ -96,4 +96,4 @@ def query(bot_type):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=443)
+    app.run(host='0.0.0.0', port=443, debug=True)
