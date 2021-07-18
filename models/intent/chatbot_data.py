@@ -50,7 +50,7 @@ test_ds = ds.skip(train_size + val_size).take(test_size).batch(20)
 # 하이퍼파라미터 설정
 dropout_prob = 0.5
 EMB_SIZE = 128
-EPOCH = 10
+EPOCH = 500
 VOCAB_SIZE = len(p.word_index) + 1  # 전체 단어 수
 
 # CNN 모델 정의

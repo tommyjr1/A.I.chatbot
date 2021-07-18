@@ -8,7 +8,6 @@ import sys
 sys.path.append('../../utils/')
 from Preprocess import Preprocess
 
-
 # 학습 파일 불러오기
 def read_file(file_name):
     sents = []
@@ -43,7 +42,6 @@ for t in corpus:
 
     sentences.append(sentence)
     tags.append(bio_tag)
-
 
 print("샘플 크기 : \n", len(sentences))
 print("0번 째 샘플 단어 시퀀스 : \n", sentences[0])
@@ -87,7 +85,6 @@ print("학습 샘플 레이블 형상 : ", y_train.shape)
 print("테스트 샘플 시퀀스 형상 : ", x_test.shape)
 print("테스트 샘플 레이블 형상 : ", y_test.shape)
 
-
 # 모델 정의 (Bi-LSTM)
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Embedding, Dense, TimeDistributed, Dropout, Bidirectional
@@ -103,7 +100,6 @@ model.fit(x_train, y_train, batch_size=128, epochs=10)
 print("평가 결과 : ", model.evaluate(x_test, y_test)[1])
 model.save('ner_model.h5')
 
-
 # 시퀀스를 NER 태그로 변환
 def sequences_to_tag(sequences):  # 예측값을 index_to_ner를 사용하여 태깅 정보로 변경하는 함수.
     result = []
@@ -114,7 +110,6 @@ def sequences_to_tag(sequences):  # 예측값을 index_to_ner를 사용하여 �
             temp.append(index_to_ner[pred_index].replace("PAD", "O"))  # 'PAD'는 'O'로 변경
         result.append(temp)
     return result
-
 
 # f1 스코어 계산을 위해 사용
 from seqeval.metrics import f1_score, classification_report
