@@ -37,6 +37,6 @@ madcamp week3
 
 ## 실행 
 - Server : bot.py
-- Client : 
+- Client : chatbot_api/app.py
 
 
