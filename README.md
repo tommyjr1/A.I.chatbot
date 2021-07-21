@@ -1,62 +1,40 @@
-# 처음 배우는 딥러닝 챗봇
+# AI(아직 인간이 낫다
+madcamp week3
 
-본 저장소는 "처음 배우는 딥러닝 챗봇" 의 예제 코드를 공유하는 저장소입니다.
+## 팀원 : 금나연, 송재현
 
+## Development Environment
 
+### *Python 3.6.9*
 
-## 구성
-- [예제](#예제)
-- [정오표](#정오표)
+  * OpenJDK version : 11.0.11
+  * JPype version : JPype1‑1.1.2‑cp36
+  * Konlpy version : v0.5.2.
+  * tensorflow version : 2.5.0
+  * Flask version : 2.0.1
+  * Ubuntu : 18.04.2
+  * MySQL version : 5.7.34, for Linux (x86_64)
+  * Naver TalkTalk API
 
-## 예제
-#### 2장
-- 파이썬 대화형 모드(인터프리터)에서 실습된 예제는 포함되어 있지 않습니다.
-- [파이썬 시작하기](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch2)
+## Introduction
+- 대화형 챗봇 개발
 
-#### 3장
-- [토크나이징](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch3)
+## Pipeline
+### Training
+*1. Intent*
+- 7개의 문맥(intent)이 라벨링된 105681개의 데이터에서 문장 내 키워드를 추출
+    {0: "인사", 1: "욕설", 2: "주문", 3: "예약", 4: "기타", 5:"이별", 6:"사랑"}
+- 단어 시퀀스 벡터를 만들어 CNN을 이용해 모델 학습, 평가 및 저장 ('models/intent/intent_model.h5')
 
-#### 4장
-- [임베딩](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch4)
+*2. Ner*
+- 형태소 별로 160458개의 문장을 분석하여 라벨링된 데이터 이용
+    B_FOOD : 음식
+    B_DT, B_TI : 시간 (학습 데이터의 영향으로 날짜와 시간을 혼용해서 사용)
+    B_PS : 사람
+    B_OG : 조직, 회사
+    B_LC : 지역
+- 단어 시퀀스 벡터를 만들어 Bi-LSTM을 이용해 모델 학습, 평가 및 저장 ('models/ner/ner_model.h5')
 
-#### 5장
-- [텍스트 유사도](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch5)
-
-#### 6장
-- [챗봇 엔진에 필요한 딥러닝 모델](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch6)
-
-#### 7장
-- [챗봇 학습툴 만들기](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch7)
-
-#### 7장
-- [챗봇 학습툴 만들기](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch7)
-
-#### 8장
-- 챗봇 엔진 만들기   (8장의 예제는 저장소 루트에 존재합니다.)   8장 예제소스 구조는 다음과 같습니다.
-<pre>
-/
-    /config
-    /models
-    /test
-    /train_tools
-    /utils
-</pre>
-
-#### 9장
-- [챗봇 학습툴 만들기](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch9)
-
-#### 10장
-- [카카오톡 챗봇 만들기](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch10)
-
-#### 11장
-- [네이버톡톡 챗봇 만들기](https://github.com/keiraydev/chatbot/tree/master/book_ex/ch11)
+## 실행 화면
 
 
-
-## 정오표
-
-
-## License & Copyright
-**Copyright © 2020 조경래 & Hanbit Media, Inc.**
-<br><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br>
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 Unported License</a>.
