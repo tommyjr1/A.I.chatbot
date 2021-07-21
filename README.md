@@ -38,5 +38,6 @@ madcamp week3
 ## 실행 
 - Server : bot.py
 - Client : chatbot_api/app.py
+- Chatbot : https://talk.naver.com/ct/w4gxjf
 
 
