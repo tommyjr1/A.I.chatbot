@@ -67,7 +67,7 @@ def query(bot_type):
             event = body['event']
 
             from NaverEvent import NaverEvent
-            authorization_key = 'Lo9C9SzqTNm2xBKWFaL1'
+            authorization_key = '<authorization_key>'
             naverEvent = NaverEvent(authorization_key)
 
             if event == "open":
