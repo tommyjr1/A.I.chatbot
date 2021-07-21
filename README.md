@@ -35,6 +35,8 @@ madcamp week3
     B_LC : 지역
 - 단어 시퀀스 벡터를 만들어 Bi-LSTM을 이용해 모델 학습, 평가 및 저장 ('models/ner/ner_model.h5')
 
-## 실행 화면
+## 실행 
+- Server : bot.py
+- Client : 
 
 
