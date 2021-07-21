@@ -94,7 +94,7 @@ if __name__ == '__main__':
     )
     print("DB 접속")
 
-    port = 80
+    port = 443
     listen = 100
 
     # 봇 서버 동작
