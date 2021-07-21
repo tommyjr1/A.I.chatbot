@@ -49,9 +49,9 @@ madcamp week3
 - Chatbot : https://talk.naver.com/ct/w4gxjf
 
 ## 화면캡처
-<img width="406" alt="AI_etc" src="https://user-images.githubusercontent.com/82078588/126426779-fcce688f-1104-4ab6-a737-4a1a31847b84.png">
-<img width="409" alt="AI_food" src="https://user-images.githubusercontent.com/82078588/126426788-7fbb0c71-1577-4709-8c23-927e803fe5da.png">
-<img width="402" alt="AI_hello" src="https://user-images.githubusercontent.com/82078588/126426791-3d05ed31-5669-4145-91f0-05832b730276.png">
-<img width="406" alt="AI_love" src="https://user-images.githubusercontent.com/82078588/126426794-4ef22d79-b746-4c77-8a85-0dd09781f5fe.png">
-<img width="410" alt="AI_reserve" src="https://user-images.githubusercontent.com/82078588/126426797-54b54302-ba79-4c3b-a658-70a015a75765.png">
-<img width="406" alt="AI_sad" src="https://user-images.githubusercontent.com/82078588/126426799-da564a5c-c5f8-48a2-abce-4684cbced8f8.png">
+<img width="400" alt="AI_etc" src="https://user-images.githubusercontent.com/82078588/126426779-fcce688f-1104-4ab6-a737-4a1a31847b84.png">
+<img width="400" alt="AI_food" src="https://user-images.githubusercontent.com/82078588/126426788-7fbb0c71-1577-4709-8c23-927e803fe5da.png">
+<img width="400" alt="AI_hello" src="https://user-images.githubusercontent.com/82078588/126426791-3d05ed31-5669-4145-91f0-05832b730276.png">
+<img width="400" alt="AI_love" src="https://user-images.githubusercontent.com/82078588/126426794-4ef22d79-b746-4c77-8a85-0dd09781f5fe.png">
+<img width="400" alt="AI_reserve" src="https://user-images.githubusercontent.com/82078588/126426797-54b54302-ba79-4c3b-a658-70a015a75765.png">
+<img width="400" alt="AI_sad" src="https://user-images.githubusercontent.com/82078588/126426799-da564a5c-c5f8-48a2-abce-4684cbced8f8.png">
